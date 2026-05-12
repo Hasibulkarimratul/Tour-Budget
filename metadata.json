@@ -1,0 +1,6 @@
+{
+  "name": "TourVault",
+  "description": "A comprehensive tour budget and expense-splitting application with debt minimization and CSV export.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}

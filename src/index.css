@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-slate-950: #0d0c10;
+  --font-sans: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  --bg-main: #f8f9ff;
+  --bg-surface: #ffffff;
+  --bg-item: #ffffff;
+  --border-color: #e8eaf6;
+  --text-main: #1b1b1f;
+  --text-muted: #6e7781;
+  --accent: #6750a4;
+  --accent-muted: #eaddff;
+  --card-shadow: 0 4px 24px -6px rgba(103, 80, 164, 0.08);
+  color-scheme: light;
+}
+
+.dark {
+  --bg-main: #141218;
+  --bg-surface: #1d1b20;
+  --bg-item: #232129;
+  --border-color: #36343b;
+  --text-main: #e6e1e5;
+  --text-muted: #938f99;
+  --accent: #d0bcff;
+  --accent-muted: #4f378b;
+  --card-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.4);
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  @apply font-sans transition-colors duration-500 overflow-x-hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.item-card {
+  background-color: var(--bg-item);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--card-shadow);
+  border-radius: 32px;
+  @apply transition-all duration-300;
+}
+
+.input-field {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  @apply rounded-2xl px-6 py-4 outline-none focus:ring-4 focus:ring-purple-500/10 focus:border-purple-500 transition-all font-medium;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded-full;
+}
+
+/* Modal animation backdrop */
+.modal-overlay {
+  @apply fixed inset-0 bg-black/40 dark:bg-black/60 backdrop-blur-xl z-50 flex items-center justify-center p-4;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
