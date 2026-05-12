@@ -1,0 +1,12 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "TOUR BUDGET CALCULATOR",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Tour Budget",
+  "start_url": "/Tour-Budget/",
+  "theme_color": "#ffffff",
+  "description": "An app to track tour expenses"
+}
